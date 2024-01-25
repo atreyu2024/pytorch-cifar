@@ -74,8 +74,8 @@ testloader = torch.utils.data.DataLoader(
 # Model
 print('==> Building model..')
 # net = VGG('VGG19')
-net = ResNet14(num_classes=2)
-# net = ResNet18()
+# net = ResNet14(num_classes=2)
+net = ResNet18(num_classes=2)
 # net = PreActResNet18()
 # net = GoogLeNet()
 # net = DenseNet121()

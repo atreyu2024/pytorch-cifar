@@ -22,7 +22,6 @@ python main.py --resume --lr=0.01
 | Model                                                         | Acc.        |
 |---------------------------------------------------------------| ----------- |
 | [VGG16](https://arxiv.org/abs/1409.1556)                      | 92.64%      |
-| [ResNet14](https://arxiv.org/abs/1512.03385) (created here) | 94.85%      |
 | [ResNet18](https://arxiv.org/abs/1512.03385)                  | 93.02%      |
 | [ResNet50](https://arxiv.org/abs/1512.03385)                  | 93.62%      |
 | [ResNet101](https://arxiv.org/abs/1512.03385)                 | 93.75%      |

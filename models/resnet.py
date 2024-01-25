@@ -110,19 +110,12 @@ class ResNet(nn.Module):
         return out
 
 
-def ResNet18():
-    return ResNet(BasicBlock, [2, 2, 2, 2])
+def ResNet18(num_classes=10):
+    return ResNet(BasicBlock, [2, 2, 2, 2], num_classes=num_classes)
 
 def ResNet14(num_classes=10):
-    """
-    When running on the server it got: 94.85
- Which is better than ResNet18 according to the README file wiht 93.02%
 
- final output was     Epoch: 199
- [============================ 391/391 ===========================>]  Step: 93ms | Tot: 56s210ms | Loss: 0.002 | Acc: 99.982% (49991/50000)
- [============================ 100/100 ===========================>]  Step: 38ms | Tot: 3s758ms | Loss: 0.223 | Acc: 94.850% (9485/10000)
-    """
-    return ResNet(BasicBlock, [2, 2, 2], num_classes=num_classes)
+    return ResNet(BasicBlock, [2, 2, 1, 1], num_classes=num_classes)
 
 def ResNet34():
     return ResNet(BasicBlock, [3, 4, 6, 3])
