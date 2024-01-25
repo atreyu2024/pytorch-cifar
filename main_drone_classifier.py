@@ -49,8 +49,8 @@ transform_overfit = transforms.Compose([
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
 
-birds_dataset = datasets.ImageFolder(root=root_directory + '/birds', transform=transform_overfit)
-drones_dataset = datasets.ImageFolder(root=root_directory + '/drones', transform=transform_overfit)
+birds_dataset = datasets.ImageFolder(root=root_directory, transform=transform_overfit)
+drones_dataset = datasets.ImageFolder(root=root_directory , transform=transform_overfit)
 combined_dataset = ConcatDataset([birds_dataset, drones_dataset])
 
 
@@ -66,7 +66,8 @@ trainloader = torch.utils.data.DataLoader(
 testset = torchvision.datasets.CIFAR10(
     root='./data', train=False, download=True, transform=transform_test)
 testloader = torch.utils.data.DataLoader(
-    testset, batch_size=100, shuffle=False, num_workers=2)
+    # testset
+    combined_dataset , batch_size=2, shuffle=False, num_workers=2)
 
 # classes = ('plane', 'car', 'bird', 'cat', 'deer',
 #            'dog', 'frog', 'horse', 'ship', 'truck')
