@@ -41,7 +41,7 @@ transform_test = transforms.Compose([
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
 
-root_directory = '/data/dummy/'
+root_directory = '/data/dummy'
 
 transform_overfit = transforms.Compose([
     transforms.Resize((36, 36)),  # Adjust the size as needed
